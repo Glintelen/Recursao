@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int i=1, n;
+int v(int n);
+int v(int n){
+    switch (n){
+    case 0:
+        return 1;
+        break;
+    case 1:
+    return 1;
+    break;
+    default:
+    if(n%2==0){
+    return 2 * v(n-1) - v(n-2);}
+    else {
+        return v(n-1) - 2 * v(n-2);
+        break;}
+    }
+}
+int main (){
+    printf("Digite um número inteiro: ");
+    scanf("%i",&n);
+   
+printf("V(n) é %i",v(n));
+return 1;
+}
